@@ -3,7 +3,7 @@ import React,{useRef,useState} from 'react'
 const Managner = () => {
     const [passType,setpassType] = useState("password")
     const [eyeIcon,seteyeIcon] = useState("./eyecross.png")
-    const [data,setdata] = useState([{name:"sa"}])
+    const [data,setdata] = useState([{url:"sa",username:"md",password:"ni bataon ga"}])
 
 
     const ref = useRef()
@@ -50,36 +50,31 @@ const Managner = () => {
                     </lord-icon>  Add Password
                     </button>
                 </div>
-                <div className="passwords w-full flex flex-col items-center justify-center">
-                   <div className='w-full mx-auto'>
-                     <h1 className='font-bold ml-4 text-left'>Your Passwords</h1>
+                <div className="passwords md:w-full flex flex-col items-center justify-center">
+                   <div className=' md:w-full  mx-auto'>
+                     <h1 className='font-bold  text-left'>Your Passwords</h1>
                    </div>
                     {data.length === 0 && "No passwords to show"}
                     {data.length !== 0 && 
-                    <table class="table-auto border border-green-900  rounded-full overflow-auto">
+                    <table class="table-auto border hover:border-2  border-green-950 hover:shadow-lg rounded-lg overflow-hidden">
   <thead className='bg-green-600 '>
     <tr >
-      <th className='py-2 px-2'>Song</th>
-      <th className='py-2 px-2'>Artist</th>
-      <th className='py-2 px-2'>Year</th>
+      <th className='py-2 px-2'>Site</th>
+      <th className='py-2 px-2'>Username</th>
+      <th className='py-2 px-2'>Password</th>
     </tr>
   </thead>
-  <tbody>
-    <tr  className='border'>
-      <td className='py-2 px-2'>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-      <td className='py-2 px-2'>Malcolm Lockyer</td>
-      <td className='py-2 px-2'>1961</td>
+  <tbody className='bg-green-100'>
+    {data.map((item,index) => {
+      return  <tr key={index}  className='border '>
+      <td className='py-2 w-[22vw] text-center px-2'><a href={item.url} target='_blank'>{item.url}</a></td>
+      <td className='py-2 w-[22vw] text-center px-2'>{item.username}</td>
+      <td className='py-2 w-[22vw] text-center px-2'>{item.password}</td>
     </tr>
-    <tr className='border'>
-      <td className='py-2 px-2'>Witchy Woman</td>
-      <td className='py-2 px-2'>The Eagles</td>
-      <td className='py-2 px-2'>1972</td>
-    </tr>
-    <tr className='border'>
-      <td className='py-2 px-2'>Shining Star</td>
-      <td className='py-2 px-2'>Earth, Wind, and Fire</td>
-      <td className='py-2 px-2'>1975</td>
-    </tr>
+
+    })}
+   
+   
   </tbody>
 </table>
                     
