@@ -50,8 +50,8 @@ const Managner = () => {
   pauseOnHover
   theme="light"
   transition={Bounce}
-/>;
-      <div className="absolute inset-0 -z-10 h-full w-full bg-green-50 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+/>
+      
       <div className=" mycontainer flex flex-col items-center ">
         <div className="heading flex flex-col justify-center items-center">
           <div className="logo font-bold text-4xl">
@@ -73,12 +73,12 @@ const Managner = () => {
             </div>
           </div>
 
-          <button className='bg-green-500 flex flex-row gap-1/2 items-center border border-green-900 hover:bg-green-400 rounded-full font-semibold w-fit px-1 py-1/2' >
+          <button className='bg-green-500 flex flex-row gap-1 items-center border border-green-900 hover:bg-green-400 rounded-full font-semibold w-fit px-1 py-1/2' >
             <lord-icon
               src="https://cdn.lordicon.com/gzqofmcx.json"
               trigger="hover"
             >
-            </lord-icon>  Add Password
+            </lord-icon>  Save
           </button>
         </div>
         <div className="passwords md:w-full flex flex-col items-center justify-center">
@@ -87,7 +87,7 @@ const Managner = () => {
           </div>
           {data.length === 0 && "No passwords to show"}
           {data.length !== 0 &&
-            <table className="table-auto border hover:border-2  border-green-950 hover:shadow-lg rounded-lg overflow-hidden">
+            <table className="table-auto border hover:border-2 mb-12 border-green-950 hover:shadow-lg rounded-lg overflow-hidden">
               <thead className='bg-green-600 '>
                 <tr >
                   <th className='py-2 px-2'>Site</th>
