@@ -16,20 +16,6 @@ const Navbar = () => {
                         >
                         </lord-icon></a>
                     </li>
-                    <li className="w-auto invert hover:font-semibold">
-                        <a  href="#"><lord-icon
-                            src="https://cdn.lordicon.com/yhtmwrae.json"
-                            trigger="hover"
-                        >
-                        </lord-icon></a>
-                    </li>
-                    <li className="w-auto invert hover:font-semibold">
-                        <a href="#"><lord-icon
-                            src="https://cdn.lordicon.com/ircnfpus.json"
-                            trigger="hover"
-                        >
-                        </lord-icon></a>
-                    </li>
                 </ul>
             </div>
         </nav>
